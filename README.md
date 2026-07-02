@@ -1,4 +1,4 @@
-# Frutta Fresca 🍊
+# Sito gestione frutta 🍊
 
 Sito e-commerce per la vendita di frutta fresca di stagione, consegnata direttamente a casa tua.
 
