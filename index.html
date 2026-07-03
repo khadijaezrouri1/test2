@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frutta Fresca — Frutta di stagione, consegnata a casa tua</title>
+  <meta name="description" content="Ordina online frutta fresca di stagione da produttori locali italiani. Consegna rapida a casa tua, packaging sostenibile, abbonamenti settimanali e mensili." />
+  <link rel="canonical" href="https://fruttafresca.it/" />
+  <meta property="og:title" content="Frutta Fresca — Frutta di stagione, consegnata a casa tua" />
+  <meta property="og:description" content="Ordina online frutta fresca di stagione da produttori locali italiani. Consegna rapida, packaging sostenibile." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fruttafresca.it/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="alternate" hreflang="it" href="https://fruttafresca.it/" />
+  <link rel="alternate" hreflang="en" href="https://fruttafresca.it/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://fruttafresca.it/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Frutta Fresca",
+    "url": "https://fruttafresca.it",
+    "description": "E-commerce di frutta fresca di stagione da produttori locali italiani",
+    "email": "ciao@fruttafresca.it",
+    "areaServed": "IT",
+    "sameAs": []
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-50:  #f0faf2;
+      --green-100: #d6f2dc;
+      --green-500: #2d7a3a;
+      --green-600: #1f5829;
+      --green-700: #174320;
+      --orange:    #e87a1e;
+      --orange-light: #fef3e8;
+      --neutral-50:  #fafaf8;
+      --neutral-100: #f3f4f6;
+      --neutral-200: #e5e7eb;
+      --neutral-400: #9ca3af;
+      --neutral-600: #6b7280;
+      --neutral-900: #1a1a1a;
+      --font: 'Inter', system-ui, sans-serif;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.10);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--neutral-900);
+      background: var(--neutral-50);
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,250,248,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--neutral-200);
+    }
+    .nav-inner {
+      max-width: 72rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--green-500);
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--green-500);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--neutral-600);
+      font-size: .95rem;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--green-500); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .lang-switch {
+      font-size: .85rem;
+      color: var(--neutral-600);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 4px 10px;
+      border: 1px solid var(--neutral-200);
+      border-radius: var(--radius-sm);
+      transition: all .2s;
+    }
+    .lang-switch:hover { border-color: var(--green-500); color: var(--green-500); }
+    .btn-nav {
+      background: var(--green-500);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .9rem;
+      transition: background .2s;
+    }
+    .btn-nav:hover { background: var(--green-600); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, var(--green-50) 0%, #fff 60%);
+      padding: 6rem 1.5rem 5rem;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: var(--green-100);
+      color: var(--green-600);
+      font-size: .8rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 1.5rem;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--neutral-900);
+      max-width: 18ch;
+      margin: 0 auto .5rem;
+    }
+    .hero h1 span { color: var(--green-500); }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--neutral-600);
+      max-width: 52ch;
+      margin: 0 auto 2.5rem;
+      line-height: 1.6;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--green-500);
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background .2s, transform .15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--green-600); transform: translateY(-1px); }
+    .btn-secondary {
+      background: #fff;
+      color: var(--green-500);
+      border: 2px solid var(--green-500);
+      padding: 14px 32px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all .2s;
+      display: inline-block;
+    }
+    .btn-secondary:hover { background: var(--green-50); transform: translateY(-1px); }
+    .hero-fruits {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .fruit-card {
+      background: #fff;
+      border-radius: var(--radius-xl);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      width: 130px;
+      transition: transform .2s;
+    }
+    .fruit-card:hover { transform: translateY(-4px); }
+    .fruit-card .emoji { font-size: 2.5rem; display: block; margin-bottom: .5rem; }
+    .fruit-card .name { font-size: .85rem; font-weight: 600; color: var(--neutral-900); }
+    .fruit-card .season { font-size: .75rem; color: var(--neutral-600); }
+
+    /* ── SECTIONS COMMON ── */
+    section { padding: 5rem 1.5rem; }
+    .container { max-width: 72rem; margin: 0 auto; }
+    .section-label {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--green-500);
+      margin-bottom: .75rem;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .section-desc {
+      color: var(--neutral-600);
+      max-width: 52ch;
+      font-size: 1.05rem;
+      margin-bottom: 3rem;
+    }
+
+    /* ── FEATURES ── */
+    .features { background: #fff; }
+    .features-header { text-align: center; }
+    .features-header .section-desc { margin-left: auto; margin-right: auto; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .feature-item {
+      background: var(--neutral-50);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      border: 1px solid var(--neutral-200);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .feature-item:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--green-50);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .feature-item h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: .5rem; }
+    .feature-item p { font-size: .95rem; color: var(--neutral-600); line-height: 1.6; }
+
+    /* ── HOW IT WORKS ── */
+    .how { background: var(--green-50); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .step { text-align: center; }
+    .step-num {
+      width: 52px;
+      height: 52px;
+      background: var(--green-500);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 0 auto 1.25rem;
+    }
+    .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: .4rem; }
+    .step p { font-size: .9rem; color: var(--neutral-600); }
+
+    /* ── PRODUCTS ── */
+    .products { background: #fff; }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.25rem;
+    }
+    .product-card {
+      background: var(--neutral-50);
+      border: 1px solid var(--neutral-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .product-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .product-card .product-emoji { font-size: 2.8rem; display: block; margin-bottom: .75rem; }
+    .product-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: .25rem; }
+    .product-card .origin { font-size: .8rem; color: var(--neutral-600); margin-bottom: .75rem; }
+    .product-badge {
+      display: inline-block;
+      background: var(--green-100);
+      color: var(--green-600);
+      font-size: .7rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 99px;
+      letter-spacing: .04em;
+    }
+    .product-badge.orange { background: var(--orange-light); color: var(--orange); }
+
+    /* ── SUBSCRIPTIONS ── */
+    .subscriptions { background: var(--neutral-100); }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .plan-card {
+      background: #fff;
+      border-radius: var(--radius-xl);
+      padding: 2.5rem 2rem;
+      border: 2px solid var(--neutral-200);
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .plan-card.featured {
+      border-color: var(--green-500);
+      position: relative;
+    }
+    .plan-card.featured::before {
+      content: "Più scelto";
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--green-500);
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 700;
+      padding: 3px 14px;
+      border-radius: 99px;
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+    .plan-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .plan-name { font-size: .85rem; font-weight: 700; color: var(--green-500); letter-spacing: .06em; text-transform: uppercase; margin-bottom: .75rem; }
+    .plan-price { font-size: 2.5rem; font-weight: 700; margin-bottom: .25rem; }
+    .plan-price span { font-size: 1rem; font-weight: 400; color: var(--neutral-600); }
+    .plan-desc { font-size: .9rem; color: var(--neutral-600); margin-bottom: 1.5rem; }
+    .plan-features { list-style: none; margin-bottom: 2rem; }
+    .plan-features li {
+      font-size: .9rem;
+      padding: .35rem 0;
+      color: var(--neutral-900);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .plan-features li::before { content: "✓"; color: var(--green-500); font-weight: 700; }
+    .btn-plan {
+      display: block;
+      text-align: center;
+      padding: 12px;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: .95rem;
+      text-decoration: none;
+      transition: all .2s;
+    }
+    .btn-plan-outline {
+      border: 2px solid var(--green-500);
+      color: var(--green-500);
+    }
+    .btn-plan-outline:hover { background: var(--green-50); }
+    .btn-plan-fill {
+      background: var(--green-500);
+      color: #fff;
+    }
+    .btn-plan-fill:hover { background: var(--green-600); }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: #fff; }
+    .testimonials-header { text-align: center; }
+    .testimonials-header .section-desc { margin-left: auto; margin-right: auto; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .review-card {
+      background: var(--neutral-50);
+      border: 1px solid var(--neutral-200);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+    }
+    .stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 1rem; }
+    .review-text { font-size: .95rem; color: var(--neutral-900); line-height: 1.65; margin-bottom: 1.25rem; font-style: italic; }
+    .reviewer { display: flex; align-items: center; gap: .75rem; }
+    .reviewer-avatar {
+      width: 40px; height: 40px;
+      background: var(--green-100);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .reviewer-name { font-size: .9rem; font-weight: 600; }
+    .reviewer-city { font-size: .8rem; color: var(--neutral-600); }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--green-500);
+      color: #fff;
+      text-align: center;
+      padding: 6rem 1.5rem;
+    }
+    .cta-section h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .cta-section p { font-size: 1.1rem; opacity: .85; max-width: 50ch; margin: 0 auto 2.5rem; }
+    .btn-white {
+      background: #fff;
+      color: var(--green-500);
+      padding: 14px 36px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-block;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.15); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--neutral-900);
+      color: var(--neutral-400);
+      padding: 4rem 1.5rem 2rem;
+    }
+    .footer-inner {
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 2rem;
+    }
+    .footer-brand .logo { color: #fff; margin-bottom: 1rem; }
+    .footer-brand p { font-size: .9rem; line-height: 1.6; max-width: 32ch; }
+    .footer-col h4 { font-size: .85rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: .5rem; }
+    .footer-col a { color: var(--neutral-400); text-decoration: none; font-size: .9rem; transition: color .2s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: .85rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .hero { padding: 4rem 1rem 3rem; }
+      section { padding: 3.5rem 1rem; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @media (prefers-reduced-motion: no-preference) {
+      [data-fade] {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity .5s ease, transform .5s ease;
+      }
+      [data-fade].visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav aria-label="Navigazione principale">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Frutta Fresca home">
+        <span class="logo-icon" aria-hidden="true">🍊</span>
+        Frutta Fresca
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#come-funziona">Come funziona</a></li>
+        <li><a href="#prodotti">Prodotti</a></li>
+        <li><a href="#abbonamenti">Abbonamenti</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="/en/" class="lang-switch" hreflang="en" lang="en">EN</a>
+        <a href="#abbonamenti" class="btn-nav">Ordina ora</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" aria-labelledby="hero-heading">
+      <p class="hero-badge" aria-label="Prodotti di stagione">🌿 100% stagionale &amp; locale</p>
+      <h1 id="hero-heading">
+        Frutta fresca,<br><span>direttamente</span><br>dai produttori
+      </h1>
+      <p class="hero-sub">
+        Selezioniamo ogni settimana le migliori varietà di stagione da agricoltori italiani e le portiamo a casa tua in 24 ore. Fresca, buona, sostenibile.
+      </p>
+      <div class="hero-cta">
+        <a href="#abbonamenti" class="btn-primary">Inizia ora</a>
+        <a href="#come-funziona" class="btn-secondary">Come funziona</a>
+      </div>
+      <div class="hero-fruits" aria-label="Selezione di frutta disponibile" data-fade>
+        <div class="fruit-card"><span class="emoji">🍑</span><span class="name">Pesche</span><span class="season">Estate</span></div>
+        <div class="fruit-card"><span class="emoji">🍒</span><span class="name">Ciliegie</span><span class="season">Giugno</span></div>
+        <div class="fruit-card"><span class="emoji">🍈</span><span class="name">Meloni</span><span class="season">Luglio</span></div>
+        <div class="fruit-card"><span class="emoji">🫐</span><span class="name">Mirtilli</span><span class="season">Agosto</span></div>
+        <div class="fruit-card"><span class="emoji">🍇</span><span class="name">Uva</span><span class="season">Settembre</span></div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="vantaggi" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="features-header" data-fade>
+          <p class="section-label">Perché sceglierci</p>
+          <h2 class="section-title" id="features-heading">Freschezza che parla da sola</h2>
+          <p class="section-desc">Non siamo un supermercato. Siamo il collegamento diretto tra te e chi coltiva.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-item" data-fade>
+            <div class="feature-icon" aria-hidden="true">🚜</div>
+            <h3>Dai produttori locali</h3>
+            <p>Collaboriamo con oltre 40 agricoltori italiani certificati. Sappiamo da dove viene ogni frutto che ordini.</p>
+          </article>
+          <article class="feature-item" data-fade>
+            <div class="feature-icon" aria-hidden="true">⚡</div>
+            <h3>Consegna in 24 ore</h3>
+            <p>Raccolta al mattino, consegnata a casa tua entro il giorno dopo. La freschezza non si aspetta.</p>
+          </article>
+          <article class="feature-item" data-fade>
+            <div class="feature-icon" aria-hidden="true">📅</div>
+            <h3>Stagionalità garantita</h3>
+            <p>Niente serre fuori stagione. Il catalogo cambia ogni settimana seguendo la natura, non il calendario marketing.</p>
+          </article>
+          <article class="feature-item" data-fade>
+            <div class="feature-icon" aria-hidden="true">♻️</div>
+            <h3>Packaging sostenibile</h3>
+            <p>Cassette in cartone riciclato, ghiaccio biodegradabile. Zero plastica inutile, zero sensi di colpa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how" id="come-funziona" aria-labelledby="how-heading">
+      <div class="container">
+        <div data-fade>
+          <p class="section-label">Come funziona</p>
+          <h2 class="section-title" id="how-heading">Tre passi, niente complicazioni</h2>
+          <p class="section-desc">Dalla scelta alla consegna, tutto sotto controllo.</p>
+        </div>
+        <div class="steps">
+          <div class="step" data-fade>
+            <div class="step-num" aria-label="Passo 1">1</div>
+            <h3>Scegli la tua cassetta</h3>
+            <p>Abbonamento settimanale o mensile, oppure ordine singolo. Decidi tu la quantità e la varietà.</p>
+          </div>
+          <div class="step" data-fade>
+            <div class="step-num" aria-label="Passo 2">2</div>
+            <h3>Raccogliamo per te</h3>
+            <p>Ogni mattina i nostri produttori raccolgono la frutta al punto giusto di maturazione, solo per i tuoi ordini.</p>
+          </div>
+          <div class="step" data-fade>
+            <div class="step-num" aria-label="Passo 3">3</div>
+            <h3>Arriva a casa tua</h3>
+            <p>Consegna refrigerata entro 24 ore. Traccia il tuo ordine in tempo reale dall'app o via email.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="prodotti" aria-labelledby="products-heading">
+      <div class="container">
+        <div data-fade>
+          <p class="section-label">Selezione di stagione</p>
+          <h2 class="section-title" id="products-heading">Frutta di luglio</h2>
+          <p class="section-desc">Il catalogo cambia ogni settimana. Ecco cosa trovi questa settimana.</p>
+        </div>
+        <div class="products-grid">
+          <article class="product-card" data-fade>
+            <span class="product-emoji">🍑</span>
+            <h3>Pesche noci</h3>
+            <p class="origin">Campania · Bio</p>
+            <span class="product-badge">Disponibile</span>
+          </article>
+          <article class="product-card" data-fade>
+            <span class="product-emoji">🍒</span>
+            <h3>Ciliegie Ferrovia</h3>
+            <p class="origin">Puglia · Locale</p>
+            <span class="product-badge">Disponibile</span>
+          </article>
+          <article class="product-card" data-fade>
+            <span class="product-emoji">🍈</span>
+            <h3>Melone retato</h3>
+            <p class="origin">Emilia · Bio</p>
+            <span class="product-badge">Disponibile</span>
+          </article>
+          <article class="product-card" data-fade>
+            <span class="product-emoji">🫐</span>
+            <h3>Mirtilli</h3>
+            <p class="origin">Trentino · Bio</p>
+            <span class="product-badge">Disponibile</span>
+          </article>
+          <article class="product-card" data-fade>
+            <span class="product-emoji">🍋</span>
+            <h3>Limoni di Sicilia</h3>
+            <p class="origin">Sicilia · Biologico</p>
+            <span class="product-badge">Disponibile</span>
+          </article>
+          <article class="product-card" data-fade>
+            <span class="product-emoji">🍇</span>
+            <h3>Uva fragola</h3>
+            <p class="origin">Veneto · Locale</p>
+            <span class="product-badge orange">Presto disponibile</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIPTIONS -->
+    <section class="subscriptions" id="abbonamenti" aria-labelledby="plans-heading">
+      <div class="container">
+        <div style="text-align:center" data-fade>
+          <p class="section-label">Abbonamenti</p>
+          <h2 class="section-title" id="plans-heading">Scegli il tuo piano</h2>
+          <p class="section-desc" style="margin-left:auto;margin-right:auto">Abbonati e risparmia. Nessun vincolo, disdici quando vuoi.</p>
+        </div>
+        <div class="plans">
+          <article class="plan-card" data-fade>
+            <p class="plan-name">Essenziale</p>
+            <p class="plan-price">€18 <span>/ settimana</span></p>
+            <p class="plan-desc">Perfetto per 1-2 persone</p>
+            <ul class="plan-features">
+              <li>3 kg di frutta mista</li>
+              <li>2-3 varietà a scelta</li>
+              <li>Consegna gratuita</li>
+              <li>Pausa quando vuoi</li>
+            </ul>
+            <a href="#" class="btn-plan btn-plan-outline">Inizia</a>
+          </article>
+          <article class="plan-card featured" data-fade>
+            <p class="plan-name">Famiglia</p>
+            <p class="plan-price">€32 <span>/ settimana</span></p>
+            <p class="plan-desc">Perfetto per 3-4 persone</p>
+            <ul class="plan-features">
+              <li>6 kg di frutta mista</li>
+              <li>4-5 varietà a scelta</li>
+              <li>Consegna gratuita</li>
+              <li>Pausa quando vuoi</li>
+              <li>Ricette stagionali incluse</li>
+            </ul>
+            <a href="#" class="btn-plan btn-plan-fill">Inizia</a>
+          </article>
+          <article class="plan-card" data-fade>
+            <p class="plan-name">Ordine singolo</p>
+            <p class="plan-price">€24 <span>/ spedizione</span></p>
+            <p class="plan-desc">Senza impegno</p>
+            <ul class="plan-features">
+              <li>Quantità a scelta</li>
+              <li>Varietà a scelta</li>
+              <li>Consegna €3,90</li>
+              <li>Nessun abbonamento</li>
+            </ul>
+            <a href="#" class="btn-plan btn-plan-outline">Ordina</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="testimonials-header" data-fade>
+          <p class="section-label">Recensioni</p>
+          <h2 class="section-title" id="reviews-heading">Cosa dicono i nostri clienti</h2>
+          <p class="section-desc">Oltre 3.000 famiglie ci scelgono ogni settimana.</p>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card" data-fade>
+            <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+            <p class="review-text">"Le ciliegie erano incredibili, mai mangiate così buone. Si sentiva che erano state raccolte quel giorno. Ordino ogni settimana ormai."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" aria-hidden="true">👩</div>
+              <div>
+                <p class="reviewer-name">Martina R.</p>
+                <p class="reviewer-city">Milano</p>
+              </div>
+            </div>
+          </article>
+          <article class="review-card" data-fade>
+            <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+            <p class="review-text">"Finalmente frutta vera. Il melone era dolcissimo e la consegna è arrivata puntualissima. Il packaging è anche bello, sembra un regalo."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" aria-hidden="true">👨</div>
+              <div>
+                <p class="reviewer-name">Luca T.</p>
+                <p class="reviewer-city">Roma</p>
+              </div>
+            </div>
+          </article>
+          <article class="review-card" data-fade>
+            <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+            <p class="review-text">"Ho provato altri servizi simili, ma qui la qualità è un altro livello. Sapere da dove viene ogni frutto fa la differenza. Consiglio vivamente."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" aria-hidden="true">👩</div>
+              <div>
+                <p class="reviewer-name">Sofia M.</p>
+                <p class="reviewer-city">Torino</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Pronto a mangiare frutta vera?</h2>
+      <p>Prima cassetta con il 20% di sconto. Nessun vincolo, disdici in qualsiasi momento.</p>
+      <a href="#abbonamenti" class="btn-white">Inizia ora — primo ordine −20%</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-icon" aria-hidden="true">🍊</span>
+            Frutta Fresca
+          </a>
+          <p>Frutta di stagione da produttori locali italiani, consegnata a casa tua in 24 ore.</p>
+        </div>
+        <nav class="footer-col" aria-label="Link utili">
+          <h4>Sito</h4>
+          <ul>
+            <li><a href="#come-funziona">Come funziona</a></li>
+            <li><a href="#prodotti">Prodotti</a></li>
+            <li><a href="#abbonamenti">Abbonamenti</a></li>
+            <li><a href="#vantaggi">Perché noi</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Contatti e info">
+          <h4>Contatti</h4>
+          <ul>
+            <li><a href="mailto:ciao@fruttafresca.it">ciao@fruttafresca.it</a></li>
+            <li><a href="/en/" hreflang="en">English</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Termini di servizio</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Frutta Fresca. Tutti i diritti riservati.</p>
+        <p>Fatto con ❤️ in Italia</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible')
+          observer.unobserve(e.target)
+        }
+      })
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' })
+
+    document.querySelectorAll('[data-fade]').forEach(el => observer.observe(el))
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Frutta Fresca
+
+> E-commerce italiano di frutta fresca di stagione, consegnata direttamente a casa tua da produttori locali.
+
+## Pages
+
+- [Home](https://fruttafresca.it/): Scopri la nostra selezione di frutta fresca stagionale e ordina online
+- [Prodotti](https://fruttafresca.it/#prodotti): Catalogo frutta stagionale aggiornato settimanalmente
+- [Abbonamenti](https://fruttafresca.it/#abbonamenti): Cassette della frutta settimanali o mensili
+- [Chi siamo](https://fruttafresca.it/#chi-siamo): La nostra missione e i nostri valori
+
+## Key topics
+
+frutta fresca, consegna a domicilio, frutta stagionale, produttori locali, biologico, cassette della frutta, abbonamento frutta, spesa online, frutta italiana, frutta di qualità, ortofrutta, frutta km0, frutta biologica, delivery frutta, acquisto frutta online
+
+## Contact
+
+Email: ciao@fruttafresca.it
